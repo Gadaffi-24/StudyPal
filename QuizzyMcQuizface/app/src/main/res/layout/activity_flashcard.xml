@@ -4,6 +4,7 @@
     android:id="@+id/relativeLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/output"
     android:padding="16dp">
 
     <!-- Question Text -->
@@ -12,29 +13,34 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:text="Question will appear here"
+        android:text="The questions will be displayed here"
         android:textSize="20sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Answer Buttons -->
+    <!-- Answer True Button -->
     <Button
         android:id="@+id/trueButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="64dp"
+        android:backgroundTint="#EBC91B"
         android:text="True"
+        app:layout_constraintHorizontal_bias="0.158"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/questionText" />
 
+    <!-- Answer False Button -->
     <Button
         android:id="@+id/falseButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#E7C519"
         android:text="False"
+        app:layout_constraintHorizontal_bias="0.762"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/trueButton" />
@@ -44,8 +50,10 @@
         android:id="@+id/nextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#EDCA1B"
         android:text="Next"
+        app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/falseButton" />

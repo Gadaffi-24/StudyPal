@@ -8,12 +8,12 @@
     android:padding="16dp">
 
     <!-- Welcome message -->
-        <TextView
+    <TextView
         android:id="@+id/welcomeMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="Welcome to the History Quiz App"
+        android:layout_width="341dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="120dp"
+        android:text="Welcome! Ready to test your history knowledge?"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -29,6 +29,7 @@
         android:layout_marginTop="168dp"
         android:layout_marginEnd="152dp"
         android:layout_marginBottom="366dp"
+        android:backgroundTint="#E7C519"
         android:text="Start Quiz"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

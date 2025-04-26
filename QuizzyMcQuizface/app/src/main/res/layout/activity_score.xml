@@ -1,43 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/relativeLayout3"
+    android:id="@+id/linearLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:background="@drawable/output"
+    android:gravity="center">
 
-    <!-- Score Display -->
+    <!-- Text for the score -->
     <TextView
         android:id="@+id/scoreText"
-        android:layout_width="wrap_content"
+        android:layout_width="371dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="Your Score: 0"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="20dp"
+        android:text="Your Score is: "
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/starsLayout"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Review Button -->
-    <Button
-        android:id="@+id/reviewButton"
+    <!-- Linear layout to hold the star images -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/starsLayout"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Review Questions"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/scoreText" />
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/scoreText"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="@+id/scoreText"
+        app:layout_constraintTop_toBottomOf="@+id/scoreText">
 
-    <!-- Exit Button -->
+        <!-- ImageViews for the stars -->
+        <ImageView
+            android:id="@+id/star1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/btn_star_big_on"
+            app:layout_constraintBottom_toBottomOf="@+id/star2"
+            app:layout_constraintEnd_toStartOf="@+id/star2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/star2"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/star2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/btn_star_big_on"
+            app:layout_constraintBottom_toBottomOf="@+id/star3"
+            app:layout_constraintEnd_toStartOf="@+id/star3"
+            app:layout_constraintStart_toEndOf="@+id/star1"
+            app:layout_constraintTop_toTopOf="@+id/star3"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/star3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/btn_star_big_on"
+            app:layout_constraintBottom_toBottomOf="@+id/star4"
+            app:layout_constraintEnd_toStartOf="@+id/star4"
+            app:layout_constraintStart_toEndOf="@+id/star2"
+            app:layout_constraintTop_toTopOf="@+id/star4" />
+
+        <ImageView
+            android:id="@+id/star4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/btn_star_big_on"
+            app:layout_constraintBottom_toBottomOf="@+id/star5"
+            app:layout_constraintEnd_toStartOf="@+id/star5"
+            app:layout_constraintStart_toEndOf="@+id/star3"
+            app:layout_constraintTop_toTopOf="@+id/star5" />
+
+        <ImageView
+            android:id="@+id/star5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/btn_star_big_on"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/star4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Review button -->
+        <Button
+            android:id="@+id/reviewButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginEnd="3dp"
+            android:backgroundTint="#EDCA1B"
+            android:text="Review Your Perfomance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/star1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Exit button -->
     <Button
         android:id="@+id/exitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#EDCA1B"
         android:text="Exit"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/reviewButton" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/starsLayout"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
