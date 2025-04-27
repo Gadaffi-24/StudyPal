@@ -12,9 +12,14 @@ Features
 5.User Interface: Clean, intuitive, and easy-to-navigate UI design.
 6.Exit Functionality: Smooth exit flow when the user decides to close the app.
 
+Github Repository:
+https://github.com/Gadaffi-24/StudyPal.git
 
-Technologies Used
+Youtube Video:
+
+
 Programming Language: Kotlin
+API: 24
 
 Usage
 1.Tap "Start" to begin the quiz.
@@ -23,4 +28,20 @@ Usage
 4.Use the "Review" button to see correct answers.
 5.Tap "Exit" to close the app.
 
+Screenshots:
+![Alt text](<welcome page.png>)
+![Alt text](score-1.png)
+![Alt text](quiz-1.png)
+![Alt text](<feedback page.png>)
 
+Utilisation of Github actions:
+
+A demonstration of GitHub Actions
+
+This repository uses [GitHub Actions](https://github.com/Gadaffi-24/StudyPal/actions) to automate:
+- Build and test the application on every push and pull request
+- Run code quality checks
+- Deploys to production (if applicable)
+
+Workflow file:
+https://github.com/Gadaffi-24/StudyPal/actions/workflows/android.yml
