@@ -30,8 +30,8 @@ Usage
 
 Screenshots:
 ![Alt text](<welcome page.png>)
-![Alt text](score-1.png)
-![Alt text](quiz-1.png)
+![Alt text](quiz.png)
+![Alt text](score.png)
 ![Alt text](<feedback page.png>)
 
 Utilisation of Github actions:
