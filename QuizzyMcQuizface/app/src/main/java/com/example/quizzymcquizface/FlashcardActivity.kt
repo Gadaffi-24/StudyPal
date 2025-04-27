@@ -69,9 +69,13 @@ class FlashcardActivity : AppCompatActivity() {
             // Compare user's answer to the correct answer
             if (userAnswer == answers[currentQuestionIndex]) {
                 score++
+                Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Incorrect", Toast.LENGTH_SHORT).show()
             }
+
         } catch (e: IndexOutOfBoundsException) {
-            // Handle case where index is invalid just in case somethind bad happens while user answers the quiz
+            // Handle case where index is invalid just in case something bad happens while user answers the quiz
             Toast.makeText(this, "Oops! Something went wrong with the quiz.", Toast.LENGTH_SHORT).show()
             questionText.text = "Question unavailable due to an error but be patient and retry."
         }
