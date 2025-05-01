@@ -13,12 +13,37 @@ class ScoreActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_score)
 
-        // Score from the previous activity
-        val score = intent.getIntExtra("score", 0)
+        // Receive data from Intent
+        val questions = intent.getStringArrayExtra("questions") ?: arrayOf()
+        val correctAnswers = intent.getBooleanArrayExtra("answers") ?: booleanArrayOf()
+        val userAnswers = intent.getBooleanArrayExtra("userAnswers") ?: booleanArrayOf()
+        val scoreFromIntent = intent.getIntExtra("score", -1)
 
-        val scoreText: TextView = findViewById(R.id.scoreText)
+        val scoreText = findViewById<TextView>(R.id.scoreText)
+        val feedbackText = findViewById<TextView>(R.id.feedbackText)
+        val reviewButton = findViewById<Button>(R.id.reviewButton)
+        val exitButton = findViewById<Button>(R.id.exitButton)
 
-        // ImageViews (stars) in the layout
+        // Calculate score if not passed via Intent
+        val calculatedScore = if (scoreFromIntent >= 0) {
+            scoreFromIntent
+        } else {
+            correctAnswers.indices.count { userAnswers.getOrNull(it) == correctAnswers[it] }
+        }
+
+        // Display score
+        scoreText.text = "Your Score is: $calculatedScore"
+
+        // Show feedback
+        val feedback = when (calculatedScore) {
+            5 -> "Perfect! You nailed every question."
+            in 3..4 -> "Great job! Just a few mistakes."
+            2 -> "Not bad, but there's room for improvement."
+            else -> "Looks like you need a bit more practice!"
+        }
+        feedbackText.text = "Feedback: $feedback"
+
+        // ImageViews stars in the layout
         val stars = listOf(
             findViewById<ImageView>(R.id.star1),
             findViewById<ImageView>(R.id.star2),
@@ -29,26 +54,23 @@ class ScoreActivity : AppCompatActivity() {
 
         // Update the stars based on the score
         for (i in 0 until 5) {
-            if (i < score) {
-                stars[i].setImageResource(android.R.drawable.btn_star_big_on) // Set filled star image
+            if (i < calculatedScore) {
+                stars[i].setImageResource(android.R.drawable.btn_star_big_on) // Filled star
             } else {
-                stars[i].setImageResource(android.R.drawable.menuitem_background)  // Set empty star image
+                stars[i].setImageResource(android.R.drawable.menuitem_background) // Empty star
             }
         }
 
-        // Display the score label
-        scoreText.text = "Your Score is: $score"
-
-        // Review button opens the ReviewActivity
-        val reviewButton: Button = findViewById(R.id.reviewButton)
+        // Review button
         reviewButton.setOnClickListener {
             val intent = Intent(this, ReviewActivity::class.java)
-            intent.putExtra("score", score)
+            intent.putExtra("questions", questions)
+            intent.putExtra("answers", correctAnswers)
+            intent.putExtra("userAnswers", userAnswers)
             startActivity(intent)
         }
 
-        // Exit button exits the app
-        val exitButton: Button = findViewById(R.id.exitButton)
+        // Exit button
         exitButton.setOnClickListener {
             finishAffinity()
         }

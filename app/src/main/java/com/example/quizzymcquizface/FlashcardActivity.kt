@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 class FlashcardActivity : AppCompatActivity() {
 
-    // Array of quiz questions
+    //Question array
     private val questions = arrayOf(
         "Nelson Mandela was South Africa’s first Black president.",
         "Table Mountain is one of the oldest mountains in the world.",
@@ -18,67 +18,85 @@ class FlashcardActivity : AppCompatActivity() {
         "Desmond Tutu was known as the 'Archbishop of Peace and Laughter.'"
     )
 
-    // Answers to each question
-    private val answers = arrayOf(true, true, false, true, true)
-
-    // Score tracker
+    //Answers array
+    private val answers = booleanArrayOf(true, true, false, true, true)
+    private var userAnswers = BooleanArray(questions.size) // Store user answers
     private var score = 0
-
-    // Tracks which question the user is on
     private var currentQuestionIndex = 0
+
+    private lateinit var questionText: TextView
+    private lateinit var trueButton: Button
+    private lateinit var falseButton: Button
+    private lateinit var nextButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_flashcard)
 
-        val questionText: TextView = findViewById(R.id.questionText)
-        val trueButton: Button = findViewById(R.id.trueButton)
-        val falseButton: Button = findViewById(R.id.falseButton)
-        val nextButton: Button = findViewById(R.id.nextButton)
+        // Initialize views
+        questionText = findViewById(R.id.questionText)
+        trueButton = findViewById(R.id.trueButton)
+        falseButton = findViewById(R.id.falseButton)
+        nextButton = findViewById(R.id.nextButton)
 
-        // Displays the questions
-        questionText.text = questions[currentQuestionIndex]
+        // Show the first question
+        showQuestion()
 
-        // Checks the answers the user tapped
+        // Handle true/false button clicks
         trueButton.setOnClickListener {
-            handleUserAnswer(true, questionText)
+            handleAnswer(true)
         }
 
         falseButton.setOnClickListener {
-            handleUserAnswer(false, questionText)
+            handleAnswer(false)
         }
 
-        // Moves to the next question or end the quiz
+        // Handle the "Next" button click
         nextButton.setOnClickListener {
             currentQuestionIndex++
             if (currentQuestionIndex < questions.size) {
-                // Load the next question
-                questionText.text = questions[currentQuestionIndex]
+                showQuestion()
+                enableAnswerButtons()
             } else {
-                // Launch ScoreActivity and pass the score
+                // Once the user finishes all the questions, send data to ScoreActivity
                 val intent = Intent(this, ScoreActivity::class.java)
                 intent.putExtra("score", score)
+                intent.putExtra("questions", questions)
+                intent.putExtra("answers", answers)
+                intent.putExtra("userAnswers", userAnswers)
                 startActivity(intent)
+                finish()  // Close the current activity after launching the ScoreActivity
             }
         }
     }
 
-    // Function to check user's answer and update score
-    private fun handleUserAnswer(userAnswer: Boolean, questionText: TextView) {
-        try {
-            // Compare user's answer to the correct answer
-            if (userAnswer == answers[currentQuestionIndex]) {
-                score++
-                Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(this, "Incorrect", Toast.LENGTH_SHORT).show()
-            }
+    // Show the current question to the user
+    private fun showQuestion() {
+        questionText.text = questions[currentQuestionIndex]
+    }
 
-        } catch (e: IndexOutOfBoundsException) {
-            // Handle case where index is invalid just in case something bad happens while user answers the quiz
-            Toast.makeText(this, "Oops! Something went wrong with the quiz.", Toast.LENGTH_SHORT).show()
-            questionText.text = "Question unavailable due to an error but be patient and retry."
+    // Handle answer selection (True/False)
+    private fun handleAnswer(userAnswer: Boolean) {
+        userAnswers[currentQuestionIndex] = userAnswer // Store the user's answers
+        val correctAnswer = answers[currentQuestionIndex]
+        if (userAnswer == correctAnswer) {
+            score++ // Increase score if answer is correct
+            Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(this, "Incorrect!", Toast.LENGTH_SHORT).show()
         }
+        disableAnswerButtons() // Disables the answer buttons after the user selects an answer
+    }
+
+    // Disables the answer buttons after a selection
+    private fun disableAnswerButtons() {
+        trueButton.isEnabled = false
+        falseButton.isEnabled = false
+    }
+
+    // Enables the answer buttons for the next question
+    private fun enableAnswerButtons() {
+        trueButton.isEnabled = true
+        falseButton.isEnabled = true
     }
 }
-

@@ -32,77 +32,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="451eedd3-2c80-4abd-bd67-e546cc22b81c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/android.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/android.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/review_page.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/.github/workflows/android.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/.idea/AndroidProjectSystem.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/.idea/androidTestResultsUserPreferences.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/.idea/deploymentTargetSelector.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/.idea/kotlinc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/.idea/migrations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/androidTest/java/com/example/quizzymcquizface/ExampleInstrumentedTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/androidTest/java/com/example/quizzymcquizface/MainActivityTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/java/com/example/quizzymcquizface/FlashcardActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/java/com/example/quizzymcquizface/MainActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/java/com/example/quizzymcquizface/ReviewActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/java/com/example/quizzymcquizface/ScoreActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/anim/wave.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/drawable/app.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/drawable/output.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/drawable/star.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/layout/activity_flashcard.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/layout/activity_review.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/layout/activity_score.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/values-night/themes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/values/colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/values/themes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/app/src/test/java/com/example/quizzymcquizface/ExampleUnitTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/feedback page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/gradle/libs.versions.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/quiz.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/score.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/settings.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizzyMcQuizface/welcome page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/score-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/quizzymcquizface/FlashcardActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/quizzymcquizface/FlashcardActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/quizzymcquizface/ReviewActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/quizzymcquizface/ReviewActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/quizzymcquizface/ScoreActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/quizzymcquizface/ScoreActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_flashcard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_flashcard.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_review.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_review.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_score.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_score.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedback page.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/score.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +54,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\RC_Student_lab\.android\avd\Pixel_6.avd)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -153,28 +95,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Android App.app.executor": "Debug",
-    "Android Instrumented Tests.testStartButton_navigatesToFlashcardActivity().executor": "Run",
-    "Android Instrumented Tests.testWelcomeMessage_isDisplayed().executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "ScreenshotViewer.SavePath": "C:/Users/RC_Student_lab/Documents/GitHub/StudyPal/QuizzyMcQuizface",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/RC_Student_lab/Documents/GitHub/StudyPal",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Android App.app.executor&quot;: &quot;Debug&quot;,
+    &quot;Android Instrumented Tests.testStartButton_navigatesToFlashcardActivity().executor&quot;: &quot;Run&quot;,
+    &quot;Android Instrumented Tests.testWelcomeMessage_isDisplayed().executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;ScreenRecorder.SavePath&quot;: &quot;C:\\Users\\RC_Student_lab&quot;,
+    &quot;ScreenshotViewer.SavePath&quot;: &quot;C:/Users/RC_Student_lab/Documents/GitHub/StudyPal&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/RC_Student_lab&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\RC_Student_lab\Documents\GitHub\StudyPal\app\src\main\res\drawable" />
       <recent name="C:\Users\RC_Student_lab\Documents\GitHub\StudyPal\QuizzyMcQuizface\app\src\main\res\drawable" />
     </key>
   </component>
@@ -398,12 +342,12 @@
       <map>
         <entry key="com.example.quizzymcquizface">
           <value>
-            <CheckInfo lastCheckTimestamp="1745671960720" />
+            <CheckInfo lastCheckTimestamp="1746118298570" />
           </value>
         </entry>
         <entry key="com.example.quizzymcquizface.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1745671960723" />
+            <CheckInfo lastCheckTimestamp="1746118298569" />
           </value>
         </entry>
       </map>

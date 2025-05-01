@@ -1,42 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
-    android:background="@drawable/output"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/review_page">
 
-    <!-- TextView for displaying feedback message -->
+    <!-- Review Content: Displays questions and answers -->
     <TextView
-        android:id="@+id/feedbackText"
-        android:layout_width="329dp"
-        android:layout_height="186dp"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="196dp"
+        android:id="@+id/reviewText"
+        android:layout_width="355dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="132dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="462dp"
-        android:text="Feedback to be displayed here"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:maxHeight="300dp"
+        android:scrollbars="vertical"
+        android:text="Review your answers here"
+        android:textColor="#120F0F"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Button for exiting the app -->
+    <!-- Exit Button to close the app -->
     <Button
         android:id="@+id/exitButton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="163dp"
-        android:layout_marginBottom="320dp"
-        android:backgroundTint="#EDCA1B"
+        android:layout_marginTop="35dp"
+        android:backgroundTint="#575652"
         android:text="Exit"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/feedbackText" />
+        app:layout_constraintEnd_toEndOf="@+id/reviewText"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/reviewText"
+        app:layout_constraintTop_toBottomOf="@+id/reviewText" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

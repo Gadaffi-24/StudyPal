@@ -1,10 +1,10 @@
 Quizzy McQuizface - History Flashcards App
 
-App Overview
-FlashFrenzy provides a series of five true/false questions related to history. Users can answer the questions, get immediate feedback on their answers (correct or incorrect), and receive a score based on their performance. After completing the quiz, users can review all questions and see the correct answers.
+App Overview:
+Mokete's HistoryQuizApp provides a series of five true/false questions related to history. Users can answer the questions get immediate feedback on their answers (correct or incorrect) and receive a score based on their performance. After completing the quiz users can review all questions and see the correct answers.
 
 
-Features
+Features:
 1.Interactive Quiz: Presenting five true/false history questions in a loop.
 2.Immediate Feedback: Users get real-time feedback on their responses.
 3.Score Tracking: Tracks correct answers and displays a personalized score at the end of the quiz.
@@ -16,12 +16,12 @@ Github Repository:
 https://github.com/Gadaffi-24/StudyPal.git
 
 Youtube Video:
-
+https://youtu.be/rkX_zAR-CE8
 
 Programming Language: Kotlin
 API: 24
 
-Usage
+Usage:
 1.Tap "Start" to begin the quiz.
 2.Answer the true/false questions.
 3.View your score and feedback at the end.
@@ -30,9 +30,9 @@ Usage
 
 Screenshots:
 ![Alt text](<welcome page.png>)
-![Alt text](quiz.png)
-![Alt text](score.png)
-![Alt text](<feedback page.png>)
+![Alt text](Flashcard_page.png)
+![Alt text](Score_page.png)
+![Alt text](Review_page.png)
 
 Utilisation of Github actions:
 
@@ -45,3 +45,5 @@ This repository uses [GitHub Actions](https://github.com/Gadaffi-24/StudyPal/act
 
 Workflow file:
 https://github.com/Gadaffi-24/StudyPal/actions/workflows/android.yml
+
+The app also contains error handling and exception handling fetures.

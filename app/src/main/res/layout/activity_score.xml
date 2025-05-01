@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,22 +13,22 @@
         android:id="@+id/scoreText"
         android:layout_width="371dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="229dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="14dp"
         android:text="Your Score is: "
         android:textColor="#000000"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/starsLayout"
+        app:layout_constraintBottom_toTopOf="@+id/feedbackText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Linear layout to hold the star images -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/starsLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="224dp"
+        android:layout_height="184dp"
+        android:layout_marginTop="88dp"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="@+id/scoreText"
         app:layout_constraintHorizontal_bias="0.516"
@@ -37,19 +38,19 @@
         <!-- ImageViews for the stars -->
         <ImageView
             android:id="@+id/star1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="36dp"
+            android:layout_height="42dp"
             android:src="@android:drawable/btn_star_big_on"
             app:layout_constraintBottom_toBottomOf="@+id/star2"
             app:layout_constraintEnd_toStartOf="@+id/star2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/star2"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <ImageView
             android:id="@+id/star2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="37dp"
+            android:layout_height="41dp"
             android:src="@android:drawable/btn_star_big_on"
             app:layout_constraintBottom_toBottomOf="@+id/star3"
             app:layout_constraintEnd_toStartOf="@+id/star3"
@@ -59,8 +60,8 @@
 
         <ImageView
             android:id="@+id/star3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="38dp"
+            android:layout_height="42dp"
             android:src="@android:drawable/btn_star_big_on"
             app:layout_constraintBottom_toBottomOf="@+id/star4"
             app:layout_constraintEnd_toStartOf="@+id/star4"
@@ -69,8 +70,8 @@
 
         <ImageView
             android:id="@+id/star4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="35dp"
+            android:layout_height="42dp"
             android:src="@android:drawable/btn_star_big_on"
             app:layout_constraintBottom_toBottomOf="@+id/star5"
             app:layout_constraintEnd_toStartOf="@+id/star5"
@@ -79,8 +80,8 @@
 
         <ImageView
             android:id="@+id/star5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="37dp"
+            android:layout_height="43dp"
             android:src="@android:drawable/btn_star_big_on"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/star4"
@@ -101,6 +102,21 @@
             app:layout_constraintTop_toBottomOf="@+id/star1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Feedback Text -->
+    <TextView
+        android:id="@+id/feedbackText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="194dp"
+        android:text="Feedback:"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreText"
+        tools:ignore="MissingConstraints" />
 
     <!-- Exit button -->
     <Button
