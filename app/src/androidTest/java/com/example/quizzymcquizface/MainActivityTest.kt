@@ -1,5 +1,6 @@
 package com.example.quizzymcquizface
 
+import android.widget.TextView
 import androidx.test.espresso.Espresso.onView // Main entry point for Espresso interactions
 import androidx.test.espresso.action.ViewActions.click // Action to perform a click
 import androidx.test.espresso.assertion.ViewAssertions.matches // Assertion to check view state
@@ -43,6 +44,24 @@ class MainActivityTest {
     fun setUp() {
         Intents.init() // Start monitoring intents
     }
+
+    /**
+     * Disable animations before each test to prevent UI timing issues.
+     */
+    @Before
+    fun disableAnimations() {
+        activityRule.scenario.onActivity { activity ->
+            val welcomeTextView = activity.findViewById<TextView>(R.id.welcomeMessage)
+
+            // Stop the animation
+            welcomeTextView.clearAnimation()
+
+            activity.window.decorView.animate().setDuration(0) // Disable animations globally
+            activity.window.setWindowAnimations(0) // Remove window animations
+        }
+    }
+
+
 
     /**
      * Release Espresso Intents after each test.
