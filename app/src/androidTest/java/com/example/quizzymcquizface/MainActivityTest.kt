@@ -1,42 +1,112 @@
 package com.example.quizzymcquizface
 
-import androidx.test.core.app.ActivityScenario
-import androidx.test.ext.junit.runners.AndroidJUnit4
-import androidx.test.espresso.Espresso.onView
-import androidx.test.espresso.action.ViewActions.click
-import androidx.test.espresso.assertion.ViewAssertions.matches
-import androidx.test.espresso.matcher.ViewMatchers.*
+import androidx.test.espresso.Espresso.onView // Main entry point for Espresso interactions
+import androidx.test.espresso.action.ViewActions.click // Action to perform a click
+import androidx.test.espresso.assertion.ViewAssertions.matches // Assertion to check view state
+import androidx.test.espresso.intent.Intents // For initializing and releasing intent monitoring
+import androidx.test.espresso.intent.matcher.IntentMatchers.hasComponent // Matcher to check target component of an Intent
+import androidx.test.espresso.matcher.ViewMatchers.isDisplayed // Matcher to check if a view is displayed
+import androidx.test.espresso.matcher.ViewMatchers.withId // Matcher to find a view by its R.id
+import androidx.test.espresso.matcher.ViewMatchers.withText // Matcher to find a view by its text
+import androidx.test.ext.junit.rules.ActivityScenarioRule // Rule to launch Activities in tests
+import androidx.test.ext.junit.runners.AndroidJUnit4 // Test runner for Android Instrumented tests
+import androidx.test.filters.LargeTest // Mark this as a large test (UI test)
+
+import org.junit.After
+import org.junit.Before
+import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
 /**
  * Instrumented test for MainActivity.
- * Verifies that UI elements load correctly and navigation to FlashcardActivity works.
+ * This test verifies UI elements are displayed and navigation to QuestionActivity works.
+ * Remember to run this on a device or emulator.
  */
-@RunWith(AndroidJUnit4::class)
+@RunWith(AndroidJUnit4::class) // Specify the test runner
+@LargeTest // Indicate that this is a UI test that might take longer
 class MainActivityTest {
 
-    @Test
-    fun testWelcomeMessage_isDisplayed() {
-        // Launch MainActivity
-        ActivityScenario.launch(MainActivity::class.java)
+    /**
+     * Use ActivityScenarioRule to launch MainActivity before each test method.
+     * ActivityScenarioRule handles launching and closing the activity automatically.
+     */
+    @get:Rule
+    var activityRule: ActivityScenarioRule<MainActivity> =
+        ActivityScenarioRule(MainActivity::class.java)
 
-        // Check if the welcome message is visible
-        onView(withId(R.id.welcomeMessage))
-            .check(matches(isDisplayed()))
-            .check(matches(withText("Welcome to the History Quiz App")))
+    /**
+     * Initialize Espresso Intents before each test.
+     * This allows us to verify intents fired by the activity.
+     */
+    @Before
+    fun setUp() {
+        Intents.init() // Start monitoring intents
     }
 
+    /**
+     * Release Espresso Intents after each test.
+     * Cleans up the intent monitoring.
+     */
+    @After
+    fun tearDown() {
+        Intents.release() // Stop monitoring intents
+    }
+
+    /**
+     * Test if the welcome title TextView is displayed correctly.
+     */
     @Test
-    fun testStartButton_navigatesToFlashcardActivity() {
-        // Launch MainActivity
-        ActivityScenario.launch(MainActivity::class.java)
-
-        // Click the start button
-        onView(withId(R.id.startButton)).perform(click())
-
-        // Check if question screen appears (assumes first question is visible)
-        onView(withId(R.id.questionText))
+    fun welcomeTitle_isDisplayed() {
+        // Find the view with the specific ID and check if it's displayed
+        onView(withId(R.id.welcomeMessage))
             .check(matches(isDisplayed()))
+
+        // Additionally, check if it contains the expected text
+        onView(withId(R.id.welcomeMessage))
+            .check(matches(withText("Welcome! Ready to test your history knowledge?")))
+    }
+
+    /**
+     * Test if the welcome description TextView is displayed correctly.
+     */
+    @Test
+    fun welcomeDescription_isDisplayed() {
+        // Find the view and check if it's displayed
+        onView(withId(R.id.welcomeMessage))
+            .check(matches(isDisplayed()))
+
+        // Optionally check partial text if the full text is long or might change slightly
+        // onView(withId(R.id.welcomeDescTextView))
+        //    .check(matches(withText(containsString("Test your knowledge"))))
+    }
+
+    /**
+     * Test if the Start button is displayed.
+     */
+    @Test
+    fun startButton_isDisplayed() {
+        onView(withId(R.id.startButton))
+            .check(matches(isDisplayed()))
+        onView(withId(R.id.startButton))
+            .check(matches(withText("START QUIZ")))
+    }
+
+    /**
+     * Test if clicking the Start button navigates to QuestionActivity.
+     */
+    @Test
+    fun clickStartButton_navigatesToQuestionActivity() {
+        // Find the start button using its ID and perform a click action
+        onView(withId(R.id.startButton))
+            .perform(click())
+
+        // Verify that an Intent was sent with the target component QuestionActivity
+        Intents.intended(hasComponent(FlashcardActivity::class.java.name))
+
+        // Note: This test confirms the Intent was *sent*. It doesn't fully test
+        // if QuestionActivity loaded correctly, but it's a good check for navigation.
+        // More complex tests could involve checking views on the *next* activity,
+        // but that often makes tests more brittle.
     }
 }

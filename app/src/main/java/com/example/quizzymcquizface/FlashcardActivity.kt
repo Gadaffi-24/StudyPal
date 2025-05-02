@@ -100,3 +100,21 @@ class FlashcardActivity : AppCompatActivity() {
         falseButton.isEnabled = true
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

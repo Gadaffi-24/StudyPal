@@ -46,4 +46,4 @@ This repository uses [GitHub Actions](https://github.com/Gadaffi-24/StudyPal/act
 Workflow file:
 https://github.com/Gadaffi-24/StudyPal/actions/workflows/android.yml
 
-The app also contains error handling and exception handling fetures.
+The app also contains (logs) error handling and exception handling fetures.

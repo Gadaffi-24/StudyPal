@@ -32,9 +32,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="451eedd3-2c80-4abd-bd67-e546cc22b81c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/androidTestResultsUserPreferences.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/androidTestResultsUserPreferences.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/example/quizzymcquizface/MainActivityTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/example/quizzymcquizface/MainActivityTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/quizzymcquizface/FlashcardActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/quizzymcquizface/FlashcardActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +91,7 @@
   "keyToString": {
     "Android App.app.executor": "Debug",
     "Android Instrumented Tests.MainActivityTest.executor": "Debug",
-    "Android Instrumented Tests.testStartButton_navigatesToFlashcardActivity().executor": "Run",
+    "Android Instrumented Tests.testStartButton_navigatesToFlashcardActivity().executor": "Debug",
     "Android Instrumented Tests.testWelcomeMessage_isDisplayed().executor": "Debug",
     "AndroidTestSuiteView.myPassedToggleButton": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -114,7 +116,7 @@
       <recent name="C:\Users\RC_Student_lab\Documents\GitHub\StudyPal\QuizzyMcQuizface\app\src\main\res\drawable" />
     </key>
   </component>
-  <component name="RunManager" selected="Android App.app">
+  <component name="RunManager" selected="Android Instrumented Tests.MainActivityTest">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="Quizzy_McQuizface.app" />
       <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
@@ -376,8 +378,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Android Instrumented Tests.MainActivityTest" />
-        <item itemvalue="Android Instrumented Tests.testWelcomeMessage_isDisplayed()" />
         <item itemvalue="Android Instrumented Tests.testStartButton_navigatesToFlashcardActivity()" />
+        <item itemvalue="Android Instrumented Tests.testWelcomeMessage_isDisplayed()" />
       </list>
     </recent_temporary>
   </component>
